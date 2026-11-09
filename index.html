@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatika Digital Class</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f7fc;
+            color: #172554;
+        }
+
+        header {
+            background: #0b1736;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b1736, #164e9b);
+            color: white;
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #dbeafe;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            background: #38bdf8;
+            color: #082f49;
+            padding: 13px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .about {
+            background: #e8f2ff;
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: 15px auto;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        footer {
+            background: #0b1736;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .section h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">DIGITAL<span>CLASS.</span></div>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#materi">Materi</a>
+            <a href="#praktik">Praktik</a>
+            <a href="#tentang">Tentang</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <h1>Selamat Datang di<br>
+        <span>Informatika Digital Class</span></h1>
+
+        <p>
+            Belajar teknologi, memahami komputer,
+            mengembangkan kreativitas, dan membangun
+            keterampilan digital untuk masa depan.
+        </p>
+
+        <a href="#materi" class="button">Mulai Belajar →</a>
+    </section>
+
+    <section class="section" id="materi">
+        <h2>Jelajahi Pembelajaran</h2>
+        <p class="subtitle">
+            Temukan berbagai materi Informatika dengan cara yang menyenangkan.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Materi Informatika</h3>
+                <p>Pelajari konsep dasar komputer, teknologi,
+                sistem informasi, dan dunia digital.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Berpikir Komputasional</h3>
+                <p>Latih kemampuan berpikir logis,
+                sistematis, dan memecahkan masalah.</p>
+            </div>
+
+            <div class="card" id="praktik">
+                <div class="icon">⌨️</div>
+                <h3>Praktik Komputer</h3>
+                <p>Kenali aplikasi komputer dan pelajari
+                keterampilan digital secara langsung.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Kuis Interaktif</h3>
+                <p>Uji pemahaman melalui latihan
+                dan tantangan Informatika.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="tentang">
+        <h2>Belajar Hari Ini, Siap Menghadapi Masa Depan</h2>
+
+        <p>
+            Informatika Digital Class merupakan media pembelajaran
+            digital yang dirancang untuk membantu siswa mengenal
+            teknologi, meningkatkan keterampilan komputer,
+            dan mengembangkan kreativitas di era digital.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Informatika Digital Class</p>
+        <p>Belajar • Berkarya • Berinovasi</p>
+    </footer>
+
+</body>
+</html>
