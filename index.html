@@ -1,20 +1,27 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Informatika Digital Class, platform pembelajaran Informatika untuk siswa SMP kelas 7, 8, dan 9.">
 
 <title>Informatika Digital Class</title>
+<meta name="description" content="Media pembelajaran Informatika SMP kelas 7, 8, dan 9.">
 
 <style>
+
+/* =========================
+   DASAR WEBSITE
+========================= */
+
 :root {
     --navy: #142b4d;
     --blue: #2563eb;
     --blue-dark: #1d4ed8;
-    --light: #f4f7fc;
-    --text: #263449;
-    --muted: #718096;
+    --light-blue: #eff6ff;
+    --background: #f7f9fc;
+    --text: #253247;
+    --muted: #64748b;
     --border: #e5eaf2;
     --white: #ffffff;
 }
@@ -31,15 +38,21 @@ html {
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--light);
+    background: var(--background);
     color: var(--text);
     line-height: 1.6;
 }
 
-/* NAVBAR */
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   NAVIGASI
+========================= */
 
 .navbar {
-    background: var(--white);
+    background: white;
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
@@ -47,21 +60,20 @@ body {
 }
 
 .nav-container {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: auto;
     min-height: 72px;
-    padding: 0 24px;
+    padding: 12px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 20px;
 }
 
 .logo {
     font-size: 19px;
     font-weight: 800;
     color: var(--navy);
-    text-decoration: none;
     white-space: nowrap;
 }
 
@@ -72,11 +84,10 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 25px;
 }
 
 .nav-menu a {
-    text-decoration: none;
     color: #526176;
     font-size: 14px;
     font-weight: 600;
@@ -100,7 +111,9 @@ body {
     color: white;
 }
 
-/* HERO */
+/* =========================
+   HERO / PEMBUKA
+========================= */
 
 .hero {
     background: linear-gradient(120deg, #142b4d, #1e4f96);
@@ -108,26 +121,26 @@ body {
 }
 
 .hero-container {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: auto;
-    padding: 66px 24px 70px;
+    padding: 65px 25px 70px;
 }
 
 .hero-content {
-    max-width: 760px;
+    max-width: 780px;
 }
 
 .hero-label {
     display: inline-block;
+    color: #bfdbfe;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 1.4px;
-    color: #bfdbfe;
+    letter-spacing: 1.5px;
     margin-bottom: 16px;
 }
 
 .hero h1 {
-    font-size: clamp(32px, 5vw, 49px);
+    font-size: clamp(32px, 5vw, 48px);
     line-height: 1.2;
     font-weight: 800;
     margin-bottom: 18px;
@@ -140,7 +153,7 @@ body {
 .hero p {
     color: #dce9f9;
     font-size: 16px;
-    max-width: 690px;
+    max-width: 700px;
     line-height: 1.8;
     margin-bottom: 27px;
 }
@@ -160,7 +173,6 @@ body {
     border-radius: 7px;
     font-size: 14px;
     font-weight: 700;
-    text-decoration: none;
     transition: .2s;
 }
 
@@ -177,28 +189,28 @@ body {
     border-radius: 7px;
     font-size: 14px;
     font-weight: 600;
-    text-decoration: none;
-    transition: .2s;
 }
 
 .btn-secondary:hover {
     background: rgba(255,255,255,.1);
 }
 
-/* KONTEN */
+/* =========================
+   KONTEN UTAMA
+========================= */
 
 .container {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: auto;
-    padding: 0 24px;
+    padding: 0 25px;
 }
 
 .section {
-    padding: 55px 0;
+    padding: 52px 0;
 }
 
 .section-heading {
-    margin-bottom: 26px;
+    margin-bottom: 27px;
 }
 
 .section-heading h2 {
@@ -212,45 +224,53 @@ body {
     font-size: 14px;
 }
 
-/* KARTU KELAS */
+/* =========================
+   KARTU KELAS
+========================= */
 
 .class-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
 }
 
 .class-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
     background: white;
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 25px;
+    color: var(--text);
     transition: .25s;
+    cursor: pointer;
 }
 
 .class-card:hover {
-    transform: translateY(-4px);
-    border-color: #b7d0f7;
-    box-shadow: 0 12px 28px rgba(28, 68, 120, .08);
+    transform: translateY(-5px);
+    border-color: #a9c4e8;
+    box-shadow: 0 12px 28px rgba(28,68,120,.09);
 }
 
 .class-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 }
 
 .class-number {
-    width: 47px;
-    height: 47px;
-    background: #eaf2ff;
+    width: 48px;
+    height: 48px;
+    background: var(--light-blue);
     color: var(--blue);
     border-radius: 9px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 800;
 }
 
@@ -272,23 +292,18 @@ body {
 .class-card p {
     font-size: 14px;
     color: var(--muted);
-    min-height: 65px;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 .class-link {
-    display: inline-block;
     color: var(--blue);
     font-weight: 700;
     font-size: 13px;
-    text-decoration: none;
 }
 
-.class-link:hover {
-    color: var(--blue-dark);
-}
-
-/* FASILITAS */
+/* =========================
+   FASILITAS
+========================= */
 
 .feature-section {
     background: white;
@@ -298,12 +313,12 @@ body {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
 .feature-card {
-    padding: 23px;
+    padding: 24px;
     border: 1px solid var(--border);
     border-radius: 11px;
     transition: .2s;
@@ -311,16 +326,16 @@ body {
 
 .feature-card:hover {
     border-color: #b7d0f7;
-    background: #fbfdff;
+    box-shadow: 0 8px 20px rgba(28,68,120,.05);
 }
 
 .feature-icon {
-    width: 43px;
-    height: 43px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #edf4ff;
+    background: var(--light-blue);
     color: var(--blue);
     font-size: 21px;
     border-radius: 9px;
@@ -343,13 +358,14 @@ body {
     color: var(--blue);
     font-size: 13px;
     font-weight: 700;
-    text-decoration: none;
 }
 
-/* INFORMASI */
+/* =========================
+   TENTANG
+========================= */
 
 .about-section {
-    padding: 48px 24px;
+    padding: 50px 25px;
     text-align: center;
 }
 
@@ -370,16 +386,18 @@ body {
     line-height: 1.9;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: var(--navy);
     color: white;
-    padding: 28px 24px;
+    padding: 28px 25px;
 }
 
 .footer-container {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -393,23 +411,21 @@ footer {
     font-weight: 800;
 }
 
-.footer-description {
-    color: #c5d3e5;
-    font-size: 12px;
-}
-
+.footer-description,
 .footer-copy {
     color: #c5d3e5;
     font-size: 12px;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE TABLET
+========================= */
 
-@media(max-width: 800px) {
+@media (max-width: 850px) {
+
     .nav-container {
         flex-direction: column;
-        padding: 15px 18px;
-        gap: 12px;
+        padding: 16px;
     }
 
     .nav-menu {
@@ -420,19 +436,21 @@ footer {
 
     .class-grid,
     .feature-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .hero-container {
-        padding: 48px 22px;
-    }
-
-    .section {
-        padding: 40px 0;
-    }
 }
 
-@media(max-width: 450px) {
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 550px) {
+
+    .nav-container {
+        gap: 12px;
+    }
+
     .logo {
         font-size: 17px;
     }
@@ -445,6 +463,10 @@ footer {
         font-size: 12px;
     }
 
+    .hero-container {
+        padding: 45px 20px;
+    }
+
     .hero h1 {
         font-size: 32px;
     }
@@ -453,22 +475,41 @@ footer {
         font-size: 14px;
     }
 
+    .container {
+        padding: 0 18px;
+    }
+
+    .section {
+        padding: 38px 0;
+    }
+
     .section-heading h2 {
         font-size: 23px;
     }
 
-    .footer-container {
-        text-align: center;
-        justify-content: center;
+    .class-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
+
+    .footer-container {
+        justify-content: center;
+        text-align: center;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGASI -->
+<!-- =========================
+     NAVIGASI
+========================= -->
+
 <header class="navbar">
+
     <div class="nav-container">
 
         <a href="index.html" class="logo">
@@ -485,66 +526,296 @@ footer {
         </nav>
 
     </div>
+
 </header>
 
-<!-- HERO -->
+
+<!-- =========================
+     PEMBUKA WEBSITE
+========================= -->
+
 <main>
 
-<div class="hero">
-    <div class="hero-container">
+    <section class="hero">
 
-        <div class="hero-content">
+        <div class="hero-container">
 
-            <div class="hero-label">
-                MEDIA PEMBELAJARAN INFORMATIKA SMP
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    MEDIA PEMBELAJARAN INFORMATIKA SMP
+                </div>
+
+                <h1>
+                    Belajar Informatika.<br>
+                    <span>Mengembangkan Potensi Digital.</span>
+                </h1>
+
+                <p>
+                    Selamat datang di Informatika Digital Class.
+                    Temukan materi pembelajaran, panduan praktik,
+                    dan latihan interaktif untuk meningkatkan
+                    pengetahuan serta keterampilan digital.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="materi.html" class="btn-primary">
+                        Jelajahi Materi →
+                    </a>
+
+                    <a href="#pilih-kelas" class="btn-secondary">
+                        Pilih Kelas
+                    </a>
+
+                </div>
+
             </div>
 
-            <h1>
-                Belajar Informatika.<br>
-                <span>Mengembangkan Potensi Digital.</span>
-            </h1>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PILIHAN KELAS
+    ========================= -->
+
+    <section class="section" id="pilih-kelas">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Mulai Pembelajaran</h2>
+
+                <p>
+                    Pilih tingkat kelas untuk menemukan materi Informatika.
+                </p>
+
+            </div>
+
+
+            <div class="class-grid">
+
+                <!-- KELAS 7 -->
+
+                <a href="kelas7.html" class="class-card">
+
+                    <div class="class-top">
+
+                        <div class="class-number">07</div>
+
+                        <span class="class-tag">KELAS VII</span>
+
+                    </div>
+
+                    <h3>Informatika Kelas 7</h3>
+
+                    <p>
+                        Mengenal dasar-dasar Informatika,
+                        berpikir komputasional, dan teknologi digital.
+                    </p>
+
+                    <div class="class-link">
+                        Buka Pembelajaran →
+                    </div>
+
+                </a>
+
+
+                <!-- KELAS 8 -->
+
+                <a href="kelas8.html" class="class-card">
+
+                    <div class="class-top">
+
+                        <div class="class-number">08</div>
+
+                        <span class="class-tag">KELAS VIII</span>
+
+                    </div>
+
+                    <h3>Informatika Kelas 8</h3>
+
+                    <p>
+                        Mengembangkan kemampuan komputasi,
+                        pengolahan data, dan pemanfaatan teknologi.
+                    </p>
+
+                    <div class="class-link">
+                        Buka Pembelajaran →
+                    </div>
+
+                </a>
+
+
+                <!-- KELAS 9 -->
+
+                <a href="kelas9.html" class="class-card">
+
+                    <div class="class-top">
+
+                        <div class="class-number">09</div>
+
+                        <span class="class-tag">KELAS IX</span>
+
+                    </div>
+
+                    <h3>Informatika Kelas 9</h3>
+
+                    <p>
+                        Memperdalam algoritma, pemrograman,
+                        literasi digital, dan teknologi informasi.
+                    </p>
+
+                    <div class="class-link">
+                        Buka Pembelajaran →
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FASILITAS PEMBELAJARAN
+    ========================= -->
+
+    <section class="feature-section">
+
+        <div class="container section">
+
+            <div class="section-heading">
+
+                <h2>Fasilitas Pembelajaran</h2>
+
+                <p>
+                    Semua kebutuhan belajar dalam satu tempat.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">▤</div>
+
+                    <h3>Materi Pembelajaran</h3>
+
+                    <p>
+                        Pelajari materi Informatika secara
+                        sistematis dan bertahap.
+                    </p>
+
+                    <a href="materi.html">
+                        Lihat Materi →
+                    </a>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">⌘</div>
+
+                    <h3>Praktik Digital</h3>
+
+                    <p>
+                        Tingkatkan keterampilan melalui
+                        tutorial dan kegiatan praktik.
+                    </p>
+
+                    <a href="praktik.html">
+                        Lihat Praktik →
+                    </a>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">✓</div>
+
+                    <h3>Kuis dan Evaluasi</h3>
+
+                    <p>
+                        Uji pemahaman melalui latihan soal
+                        dan evaluasi pembelajaran.
+                    </p>
+
+                    <a href="kuis.html">
+                        Mulai Kuis →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TENTANG WEBSITE
+    ========================= -->
+
+    <section class="about-section">
+
+        <div class="about-box">
+
+            <h2>Belajar untuk Masa Depan Digital</h2>
 
             <p>
-                Selamat datang di Informatika Digital Class.
-                Temukan materi pembelajaran, panduan praktik,
-                dan latihan interaktif untuk meningkatkan
-                pengetahuan serta keterampilan digital.
+                Informatika membantu kita memahami teknologi,
+                berpikir logis, mengembangkan kreativitas,
+                dan menyelesaikan masalah. Melalui platform ini,
+                siswa diharapkan dapat belajar secara mandiri,
+                aktif, dan bijak dalam memanfaatkan teknologi digital.
             </p>
 
-            <div class="hero-actions">
-                <a href="materi.html" class="btn-primary">
-                    Jelajahi Materi →
-                </a>
+        </div>
 
-                <a href="#pilih-kelas" class="btn-secondary">
-                    Pilih Kelas
-                </a>
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+
+            <div class="footer-title">
+                INFORMATIKA DIGITAL CLASS
             </div>
 
+            <div class="footer-description">
+                Media Pembelajaran Informatika Sekolah Menengah Pertama
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2026 Informatika Digital Class
         </div>
 
     </div>
-</div>
 
-<!-- PILIH KELAS -->
-<section class="section" id="pilih-kelas">
-    <div class="container">
+</footer>
 
-        <div class="section-heading">
-            <h2>Mulai Pembelajaran</h2>
-            <p>Pilih tingkat kelas untuk menemukan materi Informatika.</p>
-        </div>
-
-        <div class="class-grid">
-
-            <article class="class-card">
-                <div class="class-top">
-                    <div class="class-number">07</div>
-                    <span class="class-tag">KELAS VII</span>
-                </div>
-
-                <h3>Informatika Kelas 7</h3>
-
-                <p>
-                    Mengenal dasar-dasar Informatika,
-                    berp
+</body>
+</html>
+```
