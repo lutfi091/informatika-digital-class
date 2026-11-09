@@ -324,3 +324,106 @@ button {
         padding: 30px 15px;
     }
 }
+/* =========================================
+   TAMBAHAN DESAIN BERANDA
+========================================= */
+
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 12px 23px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.home-button:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.home-section {
+    margin-top: 65px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    color: var(--primary-dark);
+    font-size: 29px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
+    color: var(--primary-dark);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-section {
+        margin-top: 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+}
