@@ -1,10 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Informatika Digital Class</title>
-<link rel="stylesheet" href="css/style.css">
+
+<title>Informatika Digital Class | Media Pembelajaran SMP</title>
+
+<meta name="description" content="Platform pembelajaran Informatika untuk siswa SMP kelas 7, 8, dan 9.">
 
 <style>
 * {
@@ -13,289 +16,351 @@
     box-sizing: border-box;
 }
 
+:root {
+    --navy: #102a56;
+    --blue: #2563eb;
+    --light-blue: #eff6ff;
+    --yellow: #facc15;
+    --text: #1e293b;
+    --muted: #64748b;
+    --white: #ffffff;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f5f8ff;
-    color: #172554;
+    background: #f8fafc;
+    color: var(--text);
+    line-height: 1.6;
 }
+
+/* NAVIGASI */
 
 header {
     background: white;
-    padding: 18px 8%;
+    padding: 15px 7%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,.06);
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
-    font-size: 21px;
+    color: var(--navy);
+    font-size: 20px;
     font-weight: 800;
-    color: #1d4ed8;
+    letter-spacing: -.5px;
+}
+
+.logo span {
+    color: var(--blue);
 }
 
 nav {
     display: flex;
-    gap: 22px;
+    align-items: center;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 nav a {
+    color: #475569;
     text-decoration: none;
-    color: #334155;
-    font-weight: 600;
     font-size: 14px;
-}
-
-nav a:hover {
-    color: #2563eb;
-}
-
-.hero {
-    padding: 90px 8%;
-    background: linear-gradient(120deg,#102a63,#2563eb);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.hero-text {
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: clamp(32px,5vw,52px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #dbeafe;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    background: #facc15;
-    color: #172554;
-    padding: 14px 25px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: 800;
-}
-
-.hero-icon {
-    font-size: 125px;
-    text-align: center;
-}
-
-section {
-    padding: 65px 8%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-title h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.section-title p {
-    color: #64748b;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 22px;
-}
-
-.card {
-    background: white;
-    padding: 28px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    font-weight: 600;
     transition: .2s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+nav a:hover {
+    color: var(--blue);
 }
 
-.card .icon {
-    font-size: 38px;
-    margin-bottom: 15px;
+/* HERO */
+
+.hero {
+    background: linear-gradient(115deg, #102a56, #1d4ed8);
+    padding: 58px 7%;
+    color: white;
 }
 
-.card h3 {
-    margin-bottom: 12px;
+.hero-content {
+    max-width: 850px;
 }
 
-.card p {
-    color: #64748b;
-    line-height: 1.6;
-    font-size: 14px;
+.hero-label {
+    display: inline-block;
+    color: #bfdbfe;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    font-weight: 800;
     margin-bottom: 18px;
 }
 
-.card a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 700;
+.hero h1 span {
+    color: var(--yellow);
 }
 
-.info {
-    background: #eaf1ff;
-    text-align: center;
-}
-
-.info p {
-    max-width: 750px;
-    margin: 15px auto 0;
+.hero p {
+    color: #dbeafe;
+    max-width: 700px;
+    font-size: 16px;
     line-height: 1.8;
-    color: #475569;
+    margin-bottom: 25px;
 }
 
-footer {
-    background: #102a63;
-    color: white;
+.btn-primary {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 12px 24px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.btn-primary:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* INFORMASI SINGKAT */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: white;
+    margin: -1px 7% 0;
+    padding: 22px 15px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.04);
     text-align: center;
-    padding: 25px;
+}
+
+.stat-item {
+    border-right: 1px solid #e2e8f0;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item h3 {
+    color: var(--blue);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.stat-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SECTION */
+
+section {
+    padding: 48px 7%;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: var(--muted);
     font-size: 14px;
 }
 
-@media(max-width:600px) {
+/* KARTU KELAS */
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.class-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    transition: .25s;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(37,99,235,.09);
+    border-color: #bfdbfe;
+}
+
+.class-number {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-blue);
+    color: var(--blue);
+    border-radius: 9px;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 17px;
+}
+
+.class-card h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.class-card p {
+    color: var(--muted);
+    font-size: 14px;
+    min-height: 65px;
+    margin-bottom: 15px;
+}
+
+.class-card a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* FITUR */
+
+.feature-section {
+    background: #eff6ff;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 23px;
+    border-radius: 11px;
+    border: 1px solid #e2e8f0;
+}
+
+.feature-icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.feature-card a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* INFORMASI */
+
+.about {
+    background: white;
+    text-align: center;
+}
+
+.about h2 {
+    color: var(--navy);
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    padding: 27px 7%;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
     header {
         justify-content: center;
     }
+
     nav {
         justify-content: center;
-        gap: 14px;
+        gap: 15px;
     }
+
     .hero {
-        padding: 60px 7%;
-        text-align: center;
-        justify-content: center;
+        padding: 45px 7%;
     }
-    .hero-icon {
-        font-size: 80px;
+
+    .class-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    section {
+        padding: 38px 6%;
     }
 }
-</style>
-</head>
 
-<body>
+@media(max-width: 450px) {
+    .stats {
+        padding: 15px 5px;
+    }
 
-<header>
-    <div class="logo">💻 Informatika Digital Class</div>
-    <nav>
-        <a href="index.html">Beranda</a>
-        <a href="materi.html">Materi</a>
-        <a href="praktik.html">Praktik</a>
-        <a href="kuis.html">Kuis</a>
-        <a href="tentang.html">Tentang</a>
-    </nav>
-</header>
-
-<div class="hero">
-    <div class="hero-text">
-        <h1>Belajar Informatika Jadi Lebih Mudah dan Menyenangkan!</h1>
-        <p>
-            Selamat datang di Informatika Digital Class.
-            Ruang belajar digital untuk mengenal teknologi,
-            mengembangkan kreativitas, dan meningkatkan
-            keterampilan digital siswa SMP.
-        </p>
-        <a href="materi.html" class="button">Mulai Belajar →</a>
-    </div>
-
-    <div class="hero-icon">🚀</div>
-</div>
-
-<section>
-    <div class="section-title">
-        <h2>Jelajahi Kelasmu</h2>
-        <p>Pilih tingkat kelas dan mulai perjalanan belajarmu.</p>
-    </div>
-
-    <div class="cards">
-        <div class="card">
-            <div class="icon">📘</div>
-            <h3>Informatika Kelas 7</h3>
-            <p>Kenali dasar-dasar informatika dan teknologi digital.</p>
-            <a href="kelas7.html">Pelajari Materi →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">📗</div>
-            <h3>Informatika Kelas 8</h3>
-            <p>Kembangkan kemampuan berpikir komputasional dan digital.</p>
-            <a href="kelas8.html">Pelajari Materi →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">📙</div>
-            <h3>Informatika Kelas 9</h3>
-            <p>Perdalam pengetahuan teknologi dan keterampilan digital.</p>
-            <a href="kelas9.html">Pelajari Materi →</a>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="section-title">
-        <h2>Fasilitas Pembelajaran</h2>
-        <p>Belajar tidak hanya membaca, tetapi juga mencoba dan berlatih.</p>
-    </div>
-
-    <div class="cards">
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>Materi Pembelajaran</h3>
-            <p>Pelajari berbagai materi Informatika secara bertahap.</p>
-            <a href="materi.html">Buka Materi →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">🖥️</div>
-            <h3>Praktik Digital</h3>
-            <p>Ikuti panduan praktik untuk meningkatkan keterampilan.</p>
-            <a href="praktik.html">Mulai Praktik →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">📝</div>
-            <h3>Kuis Interaktif</h3>
-            <p>Uji pemahamanmu melalui latihan soal Informatika.</p>
-            <a href="kuis.html">Kerjakan Kuis →</a>
-        </div>
-    </div>
-</section>
-
-<section class="info">
-    <h2>Teknologi untuk Masa Depan</h2>
-    <p>
-        Informatika bukan sekadar belajar menggunakan komputer.
-        Informatika mengajarkan kita berpikir logis, kreatif,
-        memecahkan masalah, dan memanfaatkan teknologi
-        secara bijak dalam kehidupan sehari-hari.
-    </p>
-</section>
-
-<footer>
-    <p>© 2026 Informatika Digital Class</p>
-    <p>Media Pembelajaran Informatika SMP</p>
-</footer>
-
-</body>
-</html>
+    .stat-item
